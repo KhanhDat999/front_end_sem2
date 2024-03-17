@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import { useSelector } from 'react-redux';
 import ReactSlick from '../component/reactSlick';
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 
 const cx = classNames.bind(styles)
 
@@ -63,7 +64,7 @@ const Home: React.FC = () => {
                     </h2>
                 </div>
                 <div>
-                    {/* <ReactSlick Item={Item} /> */}
+                    {/* <ReactSlick item={item} /> */}
                 </div>
                 <div >
                     <h2 className={cx('sanphammoi')} data-aos="fade-left"

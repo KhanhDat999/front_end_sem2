@@ -3,24 +3,22 @@ import classNames from 'classnames/bind';
 import { useRef } from 'react';
 import { GrFormNext } from 'react-icons/gr'
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-// import { increment } from '../redux';
 import React from "react";
-import Slider from "react-slick"
+import Slider from "react-slick";
+
 
 
 const cx = classNames.bind(styles)
 
 const ReactSlick: React.FC = ({item}: any) => {
 
-    const dispatch = useDispatch()
     const slider = useRef(null);
     const next = () => {
-        slider.current!.slickNext();
+        (slider.current as any).slickNext();
     };
 
     const previous = () => {
-        slider.current!.slickPrev();
+        (slider.current as any).slickPrev();
     };
     const settings = {
         infinite: false,
@@ -62,7 +60,7 @@ const ReactSlick: React.FC = ({item}: any) => {
                             <div className={cx('animation')}>
                                 <div className={cx('middle')}>
                                     <div className={cx('middle1')}>
-                                        <Link to='/chitietsanpham' className={cx('text')} onClick={() => dispatch(increment(res))} > CHI TIẾT    </Link>
+                                        <Link to='/chitietsanpham' className={cx('text')} > CHI TIẾT    </Link>
                                     </div>
                                 </div>
                                 <img className={cx('img')} alt='img' src={res.img} />

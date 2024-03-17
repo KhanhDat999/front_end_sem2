@@ -5,6 +5,8 @@ import "./globals.css";
 import Head from "next/head";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-      <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-      <title>THỜI TRANG CÔNG SỞ </title>
+      <link
+    rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossOrigin="anonymous"
+/>
       <link
   rel="stylesheet"
   type="text/css"
@@ -38,7 +45,8 @@ export default function RootLayout({
   type="text/css"
   href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
 />
-</Head>
+  <title>THỜI TRANG CÔNG SỞ </title>
+</head>
        <body className={inter.className}>{children}</body>
       <script src="https://unpkg.com/aos@next/dist/aos.js"/>
       <script>

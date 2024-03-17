@@ -13,7 +13,9 @@ const Layout = ({
     return (
         <div>
          <Header/>
-         {children}
+         <div style={{paddingTop : '90px'}}>
+           {children}
+         </div>
          <Footer/>
         </div>
     )
